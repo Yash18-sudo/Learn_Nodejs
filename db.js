@@ -1,13 +1,15 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 
-const mongoURL = "mongodb://127.0.0.1:27017/hotels"
+// const mongoURL = "mongodb://127.0.0.1:27017/hotels"
 
+const mongoURL = "mongodb+srv://testingyash121:yashboss%40123@cluster0.mb4rd0f.mongodb.net/";
 //setup mongoDB connection
 mongoose.connect(mongoURL,{
     useNewUrlParser : true,
     useUnifiedTopology : true,
-    family: 4
+    family: 4,
 });
 
 //Get the default connection
